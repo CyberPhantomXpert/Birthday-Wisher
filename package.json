@@ -1,25 +1,27 @@
 {
-  "name": "birthday",
-  "version": "1.0.0",
-  "description": "Birthday greetings..",
-  "main": " ",
+  "name": "birthday-wisher",
+  "version": "2.0.0",
+  "description": "A config-driven animated Happy Birthday greeting — lights, music, balloons, cake and a personal message.",
   "scripts": {
-    "server-node": "http-server -p 8081"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cyberPhantomXpert/birthday.git"
+    "start": "http-server -p 8081 -c-1",
+    "serve": "python3 -m http.server 8081"
   },
   "keywords": [
-    "Birthday"
+    "birthday",
+    "greeting",
+    "css-animation",
+    "template"
   ],
-  "author": "Ankit Singh",
-  "license": "WTFPL",
-  "bugs": {
-    "url": "https://github.com/cyberPhantomXpert/birthday/issues"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyberPhantomXpert/Birthday-Wisher.git"
   },
-  "homepage": "https://github.com/cyberPhantomXpert/birthday#readme",
-  "dependencies": {
-    "http-server": "^0.11.1"
+  "bugs": {
+    "url": "https://github.com/CyberPhantomXpert/Birthday-Wisher/issues"
+  },
+  "homepage": "https://cyberphantomxpert.github.io/Birthday-Wisher/",
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }

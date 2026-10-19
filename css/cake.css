@@ -1,0 +1,137 @@
+/* cake.css
+ * Compiled from the original cake.less so the page no longer needs to ship a
+ * LESS compiler to the browser. Modern CSS only — the old
+ * -webkit-/-moz-/-o-/-ms- prefixes are no longer required.
+ */
+
+.cake {
+  position: absolute;
+  display: none;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 300px;
+}
+
+.cake::after {
+  background: #fff;
+  border-radius: 300px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 6px;
+}
+
+/* ------------------------------------------------ Candle */
+.velas {
+  background: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -7.5px;
+  margin-top: -25px;
+  width: 15px;
+  height: 50px;
+}
+
+.velas::after,
+.velas::before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6.6667px;
+}
+
+.velas::after { top: 25%; left: 0; }
+.velas::before { top: 45%; left: 0; }
+
+/* ------------------------------------------------ Flame */
+.fuego {
+  display: none;
+  border-radius: 100%;
+  box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 37.5px;
+}
+
+.fuego:nth-child(1) { animation: fuego 2s infinite; }
+.fuego:nth-child(2) { animation: fuego 1.5s infinite; }
+.fuego:nth-child(3) { animation: fuego 1s infinite; }
+.fuego:nth-child(4) { animation: fuego 0.5s infinite; }
+.fuego:nth-child(5) { animation: fuego 0.2s infinite; }
+
+@keyframes fuego {
+  0%   { background: rgba(254, 248, 97, 0.5); transform: translateY(0) scale(1); }
+  50%  { background: rgba(255, 50, 0, 0.1);  transform: translateY(-60px) scale(0); }
+  100% { background: rgba(254, 248, 97, 0.5); transform: translateY(0) scale(1); }
+}
+
+/* ------------------------------------------------ Frosting */
+.cobertura {
+  background: #ece7e3;
+  border-radius: 150px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-left: -83.3333px;
+  margin-top: -15px;
+  width: 166.6667px;
+  height: 37.5px;
+  z-index: 10;
+}
+
+.cobertura::after,
+.cobertura::before {
+  background: #ece7e3;
+  border-radius: 300px;
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 30px;
+}
+
+.cobertura::after { top: 20px; right: 42.8571px; }
+.cobertura::before { top: 30px; right: 27.2727px; }
+
+/* ------------------------------------------------ Sponge */
+.bizcocho {
+  background: #6d3826;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -75px;
+  width: 150px;
+  height: 100px;
+}
+
+.bizcocho::after,
+.bizcocho::before {
+  background: rgba(236, 231, 227, 0.6);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px;
+}
+
+.bizcocho::after { top: 30%; left: 0; }
+.bizcocho::before { top: 60%; left: 0; }
+
+/* ------------------------------------------------ Text */
+h1,
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  width: 100%;
+  -webkit-user-select: none;
+  user-select: none;
+}
